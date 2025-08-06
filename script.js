@@ -106,10 +106,7 @@ function initializeEventListeners() {
           quantities[productId] = 1;
           this.classList.add('added');
           this.innerHTML = `
-            <span>Added ✓</span>
-            <svg class="check-icon" width="16" height="16" viewBox="0 0 16 16">
-              <path d="M13.5 4.5L6 12L2.5 8.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+            <span>Added to Bundle</span>
           `;
         }
 
@@ -230,12 +227,13 @@ function updateBundleDisplay() {
   const finalTotal = subtotal - discount;
 
   // Update discount display
+  const discountRow = document.querySelector('.discount-row');
   const discountAmount = document.querySelector('.discount-amount');
   if (discount > 0) {
-    discountAmount.textContent = `- $${discount.toFixed(2)} (30%)`;
-    discountAmount.parentElement.style.display = 'block';
+    discountAmount.textContent = `-$${discount.toFixed(0)} (30%)`;
+    discountRow.style.display = 'flex';
   } else {
-    discountAmount.parentElement.style.display = 'none';
+    discountRow.style.display = 'none';
   }
 
   // Update subtotal
@@ -246,6 +244,12 @@ function updateBundleDisplay() {
   
   if (bundleAddedToCart) {
     addToCartButton.textContent = 'Added to Cart';
+    ctaButton.innerHTML = `
+      <span>Added to Cart</span>
+      <svg width="16" height="16" viewBox="0 0 16 16">
+        <path d="M13.5 4.5L6 12L2.5 8.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    `;
     ctaButton.disabled = true;
     ctaButton.style.opacity = '0.6';
     ctaButton.style.cursor = 'not-allowed';
