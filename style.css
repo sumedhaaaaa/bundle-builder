@@ -726,6 +726,7 @@ body {
     .main-container {
         padding: 20px 10px;
         width: 100%;
+        min-height: 100vh;
         height: auto;
     }
     
@@ -823,6 +824,7 @@ body {
     .main-container {
         padding: 15px 10px;
         width: 100%;
+        min-height: 100vh;
         height: auto;
         overflow-x: hidden;
         overflow-y: visible;
@@ -885,10 +887,13 @@ body {
     
     .sticky-element {
         width: 100%;
+        min-height: auto;
         height: auto;
         padding: 15px;
         position: relative;
         overflow: visible;
+        display: flex;
+        flex-direction: column;
     }
     
     .bundle-items {
@@ -896,6 +901,25 @@ body {
         min-height: auto;
         max-height: none;
         overflow-y: visible;
+    }
+    
+    .bundle-summary {
+        width: 100%;
+        height: auto;
+        overflow: visible;
+    }
+    
+    .summary-section {
+        width: 100%;
+        height: auto;
+        overflow: visible;
+    }
+    
+    .discount-row,
+    .subtotal-row {
+        width: 100%;
+        height: auto;
+        overflow: visible;
     }
     
     .bundle-title {
