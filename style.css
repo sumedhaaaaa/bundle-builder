@@ -10,7 +10,7 @@ body {
     color: #111111;
 }
 
-/* Main Container */
+
 .main-container {
     display: flex;
     flex-direction: column;
@@ -22,7 +22,7 @@ body {
     background: #FFFFFF;
 }
 
-/* Content Container */
+
 .content-container {
     display: flex;
     flex-direction: column;
@@ -34,7 +34,7 @@ body {
     height: 1034.72px;
 }
 
-/* Header */
+
 .header-container {
     display: flex;
     flex-direction: column;
@@ -64,7 +64,7 @@ body {
     color: #111111;
 }
 
-/* Product Bundle */
+
 .product-bundle {
     display: flex;
     flex-direction: row;
@@ -76,7 +76,7 @@ body {
     height: 957.72px;
 }
 
-/* Grid Custom */
+
 .grid-custom {
     display: flex;
     flex-direction: column;
@@ -89,7 +89,7 @@ body {
     z-index: 1;
 }
 
-/* Product Row */
+
 .product-row {
     display: flex;
     flex-direction: row;
@@ -100,7 +100,7 @@ body {
     height: 454.86px;
 }
 
-/* Product Card */
+
 .product-card {
     display: flex;
     flex-direction: column;

@@ -1,77 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Buy 3 and Save 30% - Product Bundle</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="main-container">
-        <div class="content-container">
-            <!-- Header -->
-            <div class="header-container">
-                <h1 class="main-heading">Buy 3 and Save 30%</h1>
-            </div>
-
-            <!-- Product Bundle Section -->
-            <div class="product-bundle">
-                <!-- Products Grid -->
-                <div class="grid-custom">
-                    <!-- Product rows will be dynamically generated -->
-                </div>
-
-                <!-- Bundle Cart Sidebar -->
-                <div class="bundle-cart-container">
-                    <div class="sticky-element">
-                        <!-- Bundle Header -->
-                        <div class="bundle-header">
-                            <div class="bundle-title-row">
-                                <h2 class="bundle-title">Create a Bundle</h2>
-                            </div>
-                            <div class="bundle-description">
-                                <p>Add at least 3 products and Save 30%.</p>
-                            </div>
-                            <div class="progress-bundle-bar">
-                                <div class="progress-background"></div>
-                            </div>
-                        </div>
-
-                        <!-- Bundle Items -->
-                        <div class="bundle-items">
-                            <!-- Items will be dynamically added here by JavaScript -->
-                        </div>
-
-                        <!-- Bundle Summary -->
-                        <div class="bundle-summary">
-                            <div class="summary-section">
-                                <div class="discount-row" style="display: none;">
-                                    <div>
-                                        <span class="discount-label">Discount</span>
-                                        <span class="discount-amount">- $0.00 (30%)</span>
-                                    </div>
-                                </div>
-                                <div class="subtotal-row">
-                                    <span class="subtotal-label">Subtotal</span>
-                                    <span class="subtotal-amount">$0.00</span>
-                                </div>
-                            </div>
-                            <button class="add-to-cart-button">
-                                <span>Add 3 Items to Proceed</span>
-                                <svg width="16" height="16" viewBox="0 0 16 16">
-                                    <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="content-container">
+        <div class="header-container">
+          <h1 class="main-heading">Buy 3 and Save 30%</h1>
         </div>
+
+        <div class="product-bundle">
+          <div class="grid-custom"></div>
+
+          <div class="bundle-cart-container">
+            <div class="sticky-element">
+              <div class="bundle-header">
+                <div class="bundle-title-row">
+                  <h2 class="bundle-title">Create a Bundle</h2>
+                </div>
+                <div class="bundle-description">
+                  <p>Add at least 3 products and Save 30%.</p>
+                </div>
+                <div class="progress-bundle-bar">
+                  <div class="progress-background"></div>
+                </div>
+              </div>
+
+              <div class="bundle-items"></div>
+
+              <div class="bundle-summary">
+                <div class="summary-section">
+                  <div class="discount-row" style="display: none">
+                    <div>
+                      <span class="discount-label">Discount</span>
+                      <span class="discount-amount">- $0.00 (30%)</span>
+                    </div>
+                  </div>
+                  <div class="subtotal-row">
+                    <span class="subtotal-label">Subtotal</span>
+                    <span class="subtotal-amount">$0.00</span>
+                  </div>
+                </div>
+                <button class="add-to-cart-button">
+                  <span>Add 3 Items to Proceed</span>
+                  <svg width="16" height="16" viewBox="0 0 16 16">
+                    <path
+                      d="M6 12L10 8L6 4"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

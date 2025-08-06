@@ -1,9 +1,6 @@
-// Bundle functionality
-let bundleItems = new Set(); // No pre-selected items
+let bundleItems = new Set(); 
 let quantities = {};
-let bundleAddedToCart = false; // Flag to track if bundle has been added to cart
-
-// Product data
+let bundleAddedToCart = false; 
 const products = {
   1: {
     name: 'Tie-Dye Lounge Set',
@@ -36,13 +33,10 @@ const products = {
     image: 'assets/photo-1632149877166-f75d49000351.jpg',
   },
 };
-
-// Generate product cards dynamically
 function generateProductCards() {
     const gridContainer = document.querySelector('.grid-custom');
     const productIds = Object.keys(products);
-    
-    // Split products into rows of 3
+
     for (let i = 0; i < productIds.length; i += 3) {
         const row = document.createElement('div');
         row.className = 'product-row';
@@ -82,15 +76,12 @@ function generateProductCards() {
         gridContainer.appendChild(row);
     }
 }
-
-// Add event listeners for product buttons
 function initializeEventListeners() {
     document.querySelectorAll('.add-button').forEach(button => {
       button.addEventListener('click', function () {
         const productId = this.dataset.product;
 
         if (bundleItems.has(productId)) {
-          // Remove from bundle
           bundleItems.delete(productId);
           delete quantities[productId];
           this.classList.remove('added');
@@ -101,7 +92,6 @@ function initializeEventListeners() {
             </svg>
           `;
         } else {
-          // Add to bundle
           bundleItems.add(productId);
           quantities[productId] = 1;
           this.classList.add('added');
@@ -109,15 +99,11 @@ function initializeEventListeners() {
             <span>Added to Bundle</span>
           `;
         }
-
-        // Reset the added to cart flag when bundle changes
         bundleAddedToCart = false;
         updateBundleDisplay();
       });
     });
 }
-
-// Quantity controls
 document.addEventListener('click', function (e) {
   if (e.target.classList.contains('quantity-btn')) {
     const bundleItem = e.target.closest('.bundle-item');
@@ -132,8 +118,6 @@ document.addEventListener('click', function (e) {
       quantities[productId] = currentQuantity - 1;
       input.value = quantities[productId];
     }
-
-    // Reset the added to cart flag when quantities change
     bundleAddedToCart = false;
     updateBundleDisplay();
   }
@@ -142,11 +126,9 @@ document.addEventListener('click', function (e) {
     const bundleItem = e.target.closest('.bundle-item');
     const productId = bundleItem.dataset.productId;
 
-    // Remove from bundle
     bundleItems.delete(productId);
     delete quantities[productId];
 
-    // Update product button
     const productButton = document.querySelector(
       `[data-product="${productId}"]`
     );
@@ -160,26 +142,22 @@ document.addEventListener('click', function (e) {
       `;
     }
 
-    // Reset the added to cart flag when items are removed
     bundleAddedToCart = false;
     updateBundleDisplay();
   }
 });
 
-// Update bundle display
 function updateBundleDisplay() {
   const bundleItemsContainer = document.querySelector('.bundle-items');
   const subtotalAmount = document.querySelector('.subtotal-amount');
   const addToCartButton = document.querySelector('.add-to-cart-button span');
   const progressBar = document.querySelector('.progress-background');
 
-  // Clear current items
   bundleItemsContainer.innerHTML = '';
 
   let totalItems = 0;
   let subtotal = 0;
 
-  // Add items to bundle display
   bundleItems.forEach(productId => {
     const product = products[productId];
     const quantity = quantities[productId];
@@ -218,15 +196,14 @@ function updateBundleDisplay() {
     bundleItemsContainer.appendChild(bundleItem);
   });
 
-  // Update progress bar
+ 
   const progress = Math.min((bundleItems.size / 3) * 100, 100);
   progressBar.style.width = `${progress}%`;
 
-  // Calculate discount
   const discount = bundleItems.size >= 3 ? subtotal * 0.3 : 0;
   const finalTotal = subtotal - discount;
 
-  // Update discount display
+ 
   const discountRow = document.querySelector('.discount-row');
   const discountAmount = document.querySelector('.discount-amount');
   if (discount > 0) {
@@ -236,10 +213,10 @@ function updateBundleDisplay() {
     discountRow.style.display = 'none';
   }
 
-  // Update subtotal
+  
   subtotalAmount.textContent = `$${finalTotal.toFixed(2)}`;
 
-  // Update button text and state based on bundleAddedToCart flag
+ 
   const ctaButton = document.querySelector('.add-to-cart-button');
   
   if (bundleAddedToCart) {
@@ -268,23 +245,21 @@ function updateBundleDisplay() {
   }
 }
 
-// Add to cart functionality
+
 document
   .querySelector('.add-to-cart-button')
   .addEventListener('click', function () {
     if (bundleItems.size >= 3 && !bundleAddedToCart) {
-      // Set the flag to indicate bundle has been added to cart
       bundleAddedToCart = true;
       updateBundleDisplay();
       
-      // Log the bundle data (instead of showing alert)
+   
       console.log('Bundle added to cart!');
       console.log('Bundle items:', Array.from(bundleItems));
       console.log('Quantities:', quantities);
     }
   });
 
-// Initialize the page
 document.addEventListener('DOMContentLoaded', function() {
     generateProductCards();
     initializeEventListeners();
