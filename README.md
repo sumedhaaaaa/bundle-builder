@@ -10,6 +10,7 @@ This project is a clean, responsive user interface for a product bundling experi
 ## Project Structure:
 
  project-root
+ 
 ├── index.html # Main HTML page
 
 ├── style.css # Stylesheet for layout and design
@@ -47,7 +48,10 @@ Option 2: Deploy on Netlify
 - **JavaScript**
 
 
-**Sumedha Ghosh**  
+
+Made with ❤️ by **Sumedha Ghosh** 
+
 [LinkedIn](https://www.linkedin.com/in/sumedha-ghosh-150286186/)  
 [Portfolio](https://sumedha-portfolio.lovable.app/)
+
 
