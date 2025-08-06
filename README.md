@@ -11,7 +11,9 @@ This project is a clean, responsive user interface for a product bundling experi
 
  project-root
 ├── index.html # Main HTML page
+
 ├── style.css # Stylesheet for layout and design
+
 ├── script.js # JavaScript for interactivity
 
 ## Features:
@@ -48,3 +50,4 @@ Option 2: Deploy on Netlify
 **Sumedha Ghosh**  
 [LinkedIn](https://www.linkedin.com/in/sumedha-ghosh-150286186/)  
 [Portfolio](https://sumedha-portfolio.lovable.app/)
+
