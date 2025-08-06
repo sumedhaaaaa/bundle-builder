@@ -1,0 +1,769 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Instrument Sans', sans-serif;
+    background: #FFFFFF;
+    color: #111111;
+}
+
+/* Main Container */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 80px 127.5px;
+    position: relative;
+    width: 1695px;
+    height: 1194.72px;
+    background: #FFFFFF;
+}
+
+/* Content Container */
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 33px;
+    width: 1440px;
+    max-width: 1440px;
+    height: 1034.72px;
+}
+
+/* Header */
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 10px;
+    width: 1440px;
+    height: 44px;
+}
+
+.main-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    width: 1440px;
+    height: 44px;
+    font-family: 'Instrument Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -1.224px;
+    color: #111111;
+}
+
+/* Product Bundle */
+.product-bundle {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 40px;
+    isolation: isolate;
+    width: 1440px;
+    height: 957.72px;
+}
+
+/* Grid Custom */
+.grid-custom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 48px;
+    width: 1040px;
+    height: 957.72px;
+    flex-grow: 1;
+    z-index: 1;
+}
+
+/* Product Row */
+.product-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 30px;
+    width: 1040px;
+    height: 454.86px;
+}
+
+/* Product Card */
+.product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 15px;
+    width: 326.67px;
+    height: 454.86px;
+    flex-grow: 1;
+}
+
+.product-image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    width: 326.67px;
+    height: 326.66px;
+}
+
+.product-image {
+    width: 326.67px;
+    height: 326.66px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 0.5px;
+    width: 326.67px;
+    height: 113.2px;
+}
+
+.product-link {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    width: 326.67px;
+    height: 18px;
+}
+
+.product-name {
+    width: 326.67px;
+    height: 18px;
+    font-family: 'Instrument Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    color: #111111;
+}
+
+.product-form-bundle {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 9.7px 0px 0px;
+    gap: 15px;
+    width: 326.67px;
+    height: 94.7px;
+}
+
+.price-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    width: 326.67px;
+    height: 15px;
+}
+
+.price {
+    width: 56px;
+    height: 15px;
+    font-family: 'Instrument Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    color: #666666;
+}
+
+/* Button Styles */
+.add-button {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    width: 326.67px;
+    height: 55px;
+    background: #EBEBEB;
+    border: 1px solid #111111;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.add-button span {
+    width: 278.67px;
+    height: 18px;
+    font-family: 'Instrument Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.36px;
+    color: #24272B;
+    flex-grow: 1;
+}
+
+.add-button .plus-icon,
+.add-button .check-icon {
+    width: 16px;
+    height: 16px;
+    flex: none;
+}
+
+.add-button.added {
+    background: #111111;
+    border: 1px solid #111111;
+}
+
+.add-button.added span {
+    color: #FFFFFF;
+}
+
+.add-button.added .check-icon {
+    color: #FFFFFF;
+}
+
+/* Bundle Cart Container */
+.bundle-cart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    width: 360px;
+    height: 957.72px;
+    z-index: 0;
+}
+
+.sticky-element {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 31.25px 27px 32.01px;
+    gap: 30px;
+    width: 360px;
+    height: 649.66px;
+    max-height: 776px;
+    background: #FFFFFF;
+    border: 2px solid #111111;
+    border-radius: 8px;
+}
+
+/* Bundle Header */
+.bundle-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 12px;
+    width: 306px;
+    height: 83px;
+}
+
+.bundle-title-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    width: 306px;
+    height: 29px;
+}
+
+.bundle-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    width: 168px;
+    height: 29px;
+    max-height: 29.04px;
+    font-family: 'Instrument Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.816px;
+    color: #111111;
+}
+
+.bundle-description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    width: 306px;
+    height: 18px;
+}
+
+.bundle-description p {
+    width: 306px;
+    height: 18px;
+    font-family: 'Instrument Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    color: #666666;
+}
+
+.progress-bundle-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    width: 306px;
+    height: 8px;
+    background: #EBEBEB;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-background {
+    height: 8px;
+    background: #111111;
+    border-radius: 4px;
+    transition: width 0.3s ease;
+    min-width: 0%;
+}
+
+/* Bundle Items */
+.bundle-items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+    width: 306px;
+    min-height: 200px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.bundle-item {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 16px;
+    gap: 12px;
+    width: 306px;
+    min-height: 80px;
+    background: #F8F8F8;
+    border-radius: 8px;
+    border: 1px solid #EBEBEB;
+}
+
+.item-image {
+    width: 48px;
+    height: 48px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.item-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 4px;
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.item-link {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    width: 100%;
+    height: 18px;
+}
+
+.item-name {
+    width: 100%;
+    height: 18px;
+    font-family: 'Instrument Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    color: #111111;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.item-price-margin {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    width: 100%;
+    height: 15px;
+}
+
+.item-price {
+    width: 100%;
+    height: 15px;
+    font-family: 'Instrument Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    color: #666666;
+}
+
+.item-controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+    width: 100%;
+    height: 32px;
+    margin-top: 8px;
+}
+
+.quantity-input-bundle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+    height: 32px;
+    background: #FFFFFF;
+    border: 1px solid #EBEBEB;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.quantity-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    width: 32px;
+    height: 32px;
+    background: #F8F8F8;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    color: #111111;
+}
+
+.quantity-input {
+    width: 40px;
+    height: 32px;
+    background: #FFFFFF;
+    border: none;
+    text-align: center;
+    font-family: 'Instrument Sans';
+    font-size: 14px;
+    font-weight: 600;
+    color: #111111;
+}
+
+.bundle-cart-remove-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    width: 32px;
+    height: 32px;
+    background: #FF4444;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.bundle-cart-remove-button svg {
+    width: 14px;
+    height: 14px;
+    color: #FFFFFF;
+}
+
+/* Bundle Summary */
+.bundle-summary {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+    width: 306px;
+    height: auto;
+    margin-top: auto;
+}
+
+.summary-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+    width: 306px;
+    height: auto;
+}
+
+.discount-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    width: 306px;
+    height: 22px;
+}
+
+.discount-row > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+    width: 306px;
+    height: 22px;
+}
+
+.discount-label {
+    width: 60px;
+    height: 18px;
+    font-family: 'Instrument Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    color: #666666;
+}
+
+.discount-amount {
+    width: auto;
+    height: 18px;
+    font-family: 'Instrument Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    color: #00AA00;
+    margin-left: auto;
+}
+
+.subtotal-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    width: 306px;
+    height: 32px;
+    border-top: 1px solid #EBEBEB;
+    padding-top: 8px;
+}
+
+.subtotal-label {
+    width: 60px;
+    height: 18px;
+    font-family: 'Instrument Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    color: #111111;
+}
+
+.subtotal-amount {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5px 0px;
+    margin: 0 auto;
+    width: 68px;
+    height: 32px;
+    font-family: 'Instrument Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    color: #111111;
+}
+
+.add-to-cart-button {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    width: 306px;
+    height: 55px;
+    background: #111111;
+    border: 1px solid #111111;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.add-to-cart-button span {
+    width: 258px;
+    height: 18px;
+    font-family: 'Instrument Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.36px;
+    color: #FFFFFF;
+    flex-grow: 1;
+}
+
+.add-to-cart-button svg {
+    width: 16px;
+    height: 16px;
+    color: #FFFFFF;
+}
+
+.add-to-cart-button:hover {
+    background: #333333;
+    border-color: #333333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .main-container {
+        width: 100%;
+        padding: 40px 20px;
+        height: auto;
+    }
+    
+    .content-container {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .product-bundle {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        gap: 30px;
+    }
+    
+    .grid-custom {
+        width: 100%;
+        height: auto;
+    }
+    
+    .product-row {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        height: auto;
+    }
+    
+    .product-card {
+        width: calc(50% - 15px);
+        min-width: 280px;
+        height: auto;
+    }
+    
+    .bundle-cart-container {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        height: auto;
+    }
+    
+    .sticky-element {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        padding: 20px 10px;
+    }
+    
+    .main-heading {
+        font-size: 28px;
+        line-height: 34px;
+    }
+    
+    .product-card {
+        width: 100%;
+        max-width: 320px;
+    }
+    
+    .add-button {
+        width: 100%;
+    }
+    
+    .bundle-cart-container {
+        max-width: 100%;
+    }
+    
+    .sticky-element {
+        padding: 20px;
+    }
+    
+    .bundle-header,
+    .bundle-items,
+    .bundle-summary {
+        width: 100%;
+    }
+    
+    .progress-bundle-bar {
+        width: 100%;
+    }
+    
+    .add-to-cart-button {
+        width: 100%;
+    }
+}
